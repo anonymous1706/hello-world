@@ -1,0 +1,71 @@
+Option Explicit On
+Option Strict On
+Module Module1
+
+    Sub Main()
+
+        Dim UserInput As String
+	
+	Dim QUIT As String = "STOP"
+        Dim firstNUM As Integer
+        Dim secNUM As Integer
+
+	Dim Avg As Double
+
+       	System.Console.WriteLine("This program will tell which of 2 numbers is greater and then provide their average.")
+
+	
+
+'Get interactive user input
+        UserInput = InputBox$("If you wish to end the program enter " & QUIT & " Otherwise, enter the first number here: ")
+
+	While(UserInput <> QUIT)
+
+	
+
+	'Convert String to Integer
+        firstNUM = Convert.ToInt32(UserInput)
+	
+		
+	'Get interactive user input
+        UserInput = InputBox$("Enter the second number here: ")
+
+        'Convert String to Integer
+        secNUM = Convert.ToInt32(UserInput)
+
+	
+
+
+
+'Determine which number is greater or if they are equal
+	
+	
+	If firstNUM > secNUM Then 
+		Console.WriteLine(firstNUM & " is greater than " & secNUM)
+	
+
+	Else
+		If firstNUM < secNUM Then 
+			Console.WriteLine(secNUM & " is greater than " & firstNUM)
+	
+
+	Else
+
+		System.Console.WriteLine("The numbers are equal.")
+	
+	
+		
+		End If
+	End If
+        
+'Display the average, Output
+Avg = (firstNUM + secNUM) / 2
+
+        System.Console.WriteLine("The average of " & firstNUM & " and " & secNUM & " is: " & Avg)
+
+'Get interactive user input
+        UserInput = InputBox$("If you wish to end the program enter " & QUIT & " Otherwise, enter the first number here: ")
+
+	End While
+    End Sub
+End Module
