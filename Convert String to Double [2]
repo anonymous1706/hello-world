@@ -1,0 +1,24 @@
+Option Explicit On
+Option Strict On
+Module Module1
+
+    Sub Main()
+
+        Dim InchesString As String
+        Dim Inches As Double
+        Dim Feet As Double
+
+        'Get interactive user input
+        InchesString = InputBox$("Enter the legnth in INCHES here: ")
+
+        'Convert String to Double
+        Inches = Convert.ToDouble(InchesString)
+
+        'Calculate Feet
+        Feet = (Inches / 12)
+
+        'Output
+        System.Console.WriteLine("Inches: " & Inches)
+        System.Console.WriteLine("Feet: " & Feet)
+    End Sub
+End Module
