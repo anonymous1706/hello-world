@@ -1,0 +1,32 @@
+start
+  Dim UserInput As String
+	Dim num1 As Integer
+	Dim num2 As Integer
+	Dim sum As Integer	
+
+	System.Console.WriteLine("This program will add two numbers provided by you.")
+	
+	'Get interactive user input
+      	output, ("Please provide the first number.")
+
+        input num1
+	
+	'Get interactive user input
+        output, ("Please provide the second number.")
+
+  	input num2
+
+	sum = computeSum(num1, num2, sum)
+	displayValues(num1, num2, sum)
+stop
+
+	
+computeSum(num1, num2, sum)
+		sum = num1 + num2
+	return sum
+	
+	
+displayValues(Integer num1, Integer num2, Integer sum)
+		output, "First Number: " & num1)								output, ("Second Number: " & num2)
+		output, ("Sum: " & sum)
+	return 
