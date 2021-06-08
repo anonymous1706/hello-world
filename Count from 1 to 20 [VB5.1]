@@ -1,0 +1,29 @@
+Option Explicit On
+Option Strict On
+Module Module1
+
+    Sub Main()
+
+        Dim count As integer = 1
+	
+	
+	'housekeeping
+       	System.Console.WriteLine("This program will count from 1 to 20.")
+
+	
+	
+	While(count <= 20)
+	'detailLoop
+		System.Console.WriteLine(count)
+		count = count + 1
+
+	
+	end While
+
+	'endOfJob
+	System.Console.WriteLine("This is complete.")
+
+	
+
+    End Sub
+End Module
