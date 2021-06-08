@@ -1,0 +1,79 @@
+Option Explicit On
+
+Option Strict ON
+
+Module Module1
+	
+	Sub Main()
+
+	   Dim Name As String
+
+	   Dim GrossString, BonusPayString, EmployeeNumString As String
+
+	   Dim Gross, Deduct, Net, BonusPay As Double
+
+	   Dim EmployeeNum As Integer
+	   
+	   Const RATE As Double = 0.25
+
+	   Const QUIT As String = "XXX"
+
+	   Const REPORT_HEADING As String = "Payroll Report"
+
+	   Const END_LINE As String = "**End of report"
+
+	
+
+	' Work done in housekeeping() procedure
+
+ 
+
+	System.Console.WriteLine(REPORT_HEADING)
+
+	Name = InputBox$("Enter employee's name: ")
+
+	EmployeeNumString = InputBox$("Enter their employee number: ")
+
+	EmployeeNum = Convert.ToInt32(EmployeeNumString)
+	While(Name <> QUIT)
+
+
+	
+' Work done in the detailLoop() procedure
+
+
+
+	GrossString = InputBox$("Enter employee's gross pay: ")
+	
+	Gross = Convert.ToDouble(GrossString)
+	
+	BonusPayString  = InputBox$("Enter employee's bonus pay: ")
+
+	
+	BonusPay = Convert.ToDouble(BonusPayString)
+	
+	Deduct = Gross * RATE
+	Net = Gross - Deduct + BonusPay
+		
+	System.Console.WriteLine("Name: " & Name)
+		
+	System.Console.WriteLine("Employee Number: " & EmployeeNum)
+			System.Console.WriteLine("Bonus Pay: " & BonusPay)
+			System.Console.WriteLine("Gross Pay: " & Gross)
+			System.Console.WriteLine("Deductions: " & Deduct)
+			System.Console.WriteLine("Net Pay: " & Net) 
+	
+	
+	Name = InputBox$("Enter employee's name: ")
+
+		End While
+
+	
+
+	' Work done in the endOfJob() procedure
+	   
+	   			   	   System.Console.WriteLine(END_LINE)
+	
+	End Sub
+    
+            End Module
